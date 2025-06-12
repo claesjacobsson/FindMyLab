@@ -38,18 +38,16 @@ struct CustomTabView: View {
 
             // Custom expandable tab bar
             HStack {
-                Group {
-                    ForEach(CustomTab.allCases, id: \.self) { tab in
-                        Button {
-                            selectedTab = tab
-                        } label: {
-                            VStack {
-                                Image(systemName: tab.icon)
-                                Text(tab.title).font(.footnote)
-                            }
+                ForEach(CustomTab.allCases, id: \.self) { tab in
+                    Button {
+                        selectedTab = tab
+                    } label: {
+                        VStack {
+                            Image(systemName: tab.icon)
+                            Text(tab.title).font(.footnote)
                         }
-                        .tint(selectedTab == tab ? .blue : .primary)
                     }
+                    .tint(selectedTab == tab ? .blue : .primary)
                 }
                 .font(.title2)
                 .frame(maxWidth: .infinity)
