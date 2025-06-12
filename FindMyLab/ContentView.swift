@@ -15,6 +15,9 @@ struct ContentView: View {
             .sheet(isPresented: Binding(projectedValue: .constant(true))) {
                 CustomTabView()
                     .presentationDetents([.height(80), .medium, .large])
+                    .presentationBackgroundInteraction(
+                        .enabled(upThrough: .medium)
+                    )
         }
     }
 }
