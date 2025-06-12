@@ -48,7 +48,7 @@ struct CustomTabView: View {
                                 Text(tab.title).font(.footnote)
                             }
                         }
-                        .tint(selectedTab == tab ? .blue : .black)
+                        .tint(selectedTab == tab ? .blue : .primary)
                     }
                 }
                 .font(.title2)
