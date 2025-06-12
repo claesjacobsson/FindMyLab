@@ -18,6 +18,7 @@ struct ContentView: View {
                     .presentationBackgroundInteraction(
                         .enabled(upThrough: .medium)
                     )
+                    .interactiveDismissDisabled()
         }
     }
 }
