@@ -33,7 +33,7 @@ struct CustomTabView: View {
     @State private var selectedTab: CustomTab = .people
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             tabContent
 
             // Custom expandable tab bar
